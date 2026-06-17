@@ -1,0 +1,490 @@
+/*-----GENERAL------*/
+:root {
+    --rojo: #FA3921;
+    --azul: #5483F9;
+    --casi-negro: #101010;
+    --casi-blanco: #F6F6F6;
+    --fuente-principal: 'Erica One', display;
+    --fuente-secundaria: 'Fraunces', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fondo.png);
+    color: var(--casi-blanco);
+}
+
+p {
+font-size: 1.125rem;
+}
+
+
+/*-----HEADER-----*/
+header {
+    background-color: var(--casi-negro);
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+.logo {
+    width: 33.3%;
+    flex: 1;
+    text-align: center;
+}
+
+.logo h1 a {
+    font-family: var(--fuente-principal);
+    color: var(--rojo);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    line-height: 1.1; 
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--casi-negro);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    list-style: none;
+    z-index: 100;
+}
+
+.nav-links.nav-active {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--casi-blanco);
+    text-decoration: none;
+    display: block;
+    padding: 1.2rem;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #222;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--azul);
+    color: var(--casi-blanco);
+}
+
+.box-carrito-de-compras {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;}
+
+/*MENU HAMBURGUESA*/
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid var(--casi-blanco);
+    border-radius: 5px;
+
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: var(--casi-blanco);
+    border-radius: 2px;
+}
+
+.logo-hidden {
+    display: none;
+}
+
+/*-----MAIN DISCOGRAFIA-----*/
+.discografia-main {
+    padding: 16px;
+}
+
+.body-text {
+    padding: 16px 0 16px 0;
+}
+
+.cita-card {
+    background-color: #5483f96d;
+    border: 1px solid var(--azul);
+    border-radius: 30px;
+    padding: 16px;
+}
+
+div.cita-card ul li span {
+    color: var(--rojo);
+    font-weight: bolder;
+}
+
+div.cita-card ul li p {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.discografia-caja {
+    display: flex;
+    flex-direction: row;
+}
+
+.discografia-caja-cont {
+    text-align: left;
+    width: 33, 3%;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.discografia-caja-cont span {
+    font-size: 1.375rem;
+}
+
+.album-grid ul {
+    padding: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-grid ul li {
+    list-style-type: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.album-grid ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--casi-blanco);
+}
+
+
+.album-grid ul li a p {
+    color: var(--casi-blanco);
+    text-align: center;
+    max-width: 140px;
+}
+
+.album-grid ul li a img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*-----MAIN DISCOS-----*/
+.disco-main {
+    padding: 16px;
+}
+
+.disco-vinilo-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.disco-vinilo {
+    width: 55%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.disco-info {
+    flex: 1;
+    align-self: stretch;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fa3a2180;
+    border: 1px solid var(--rojo);
+    border-radius: 30px;
+    padding: 16px;
+}
+
+.disco-info span {
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.disco-canciones ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+    width: 100%;
+}
+
+.disco-canciones ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fa3a2180;
+    border: 1px solid var(--rojo);
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.disco-canciones ul li article h4 {
+    padding: 10px;
+}
+
+/* Reproductor de Spotify por canción */
+.disco-canciones ul li {
+    flex-wrap: wrap;
+}
+
+.disco-cancion {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cancion-player {
+    flex-basis: 100%;
+    margin-top: 8px;
+}
+
+.cancion-player iframe {
+    width: 100%;
+    height: 80px;
+    border: none;
+    border-radius: 12px;
+    display: block;
+}
+
+/*-----SECCIONES DISCO-----*/
+.disco-secciones ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 36px;
+}
+
+.disco-secciones ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: left ;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.discos-titulos-secciones {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5483f9a4;
+    border: 1px solid var(--azul);
+    border-radius: 30px;
+    padding: 8px 16px;
+    cursor: pointer
+}
+
+.discos-titulos-secciones span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color:#fa3a2180;
+    border: 1px solid var(--rojo);
+    border-radius: 30px;
+    flex-shrink: 0;
+    padding: 0; 
+}
+
+.discos-titulos-secciones span img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.discos-titulos-secciones.activo span img {
+    transform: rotate(180deg);
+}
+
+.disco-info-secciones {
+    padding: 16px;
+    background-color: #5483f96d;
+    border: 1px solid var(--azul);
+    border-radius: 30px;
+}
+
+.disco-seccion-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+/*-----FOOTER-----*/
+footer {
+    background-color: rgba(0, 0, 0, 0.844);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gracias-totales {
+    font-family: var(--fuente-principal);
+    color: var(--rojo);
+    text-decoration: none;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: 16px;
+}
+
+.social-icons {
+    padding: 16px;
+}
+
+.copyright {
+    text-align: center;
+    padding: 16px;
+}
+
+/*-----MEDIA QUERIES - DESKTOP-----*/
+
+@media (min-width: 992px) {
+
+    body {
+        background-size: 100% 100%;
+        background-position: top center;
+        background-attachment: scroll;
+    }
+
+    /* -- DISCOGRAFIA -- */
+    .discografia-main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 16px;
+    }
+
+    .cita-card {
+        padding: 32px;
+    }
+
+    .discografia-caja-cont {
+        flex: 1;
+        text-align: center;
+    }
+
+    .discografia-caja-cont span {
+        font-size: 2rem;
+    }
+
+    .discografia-caja-cont p {
+        font-size: 1.25rem;
+    }
+
+    div.album-grid ul {
+        gap: 16px;
+    }
+
+    div.album-grid ul li {
+        width: calc(33.333% - 11px);
+    }
+
+    .album-grid ul li a:hover {
+    transform: scale(1.1);
+    color: var(--rojo);
+    }
+
+    .album-grid ul li a:hover p {
+        color: var(--rojo);
+    }
+
+    div.album-grid ul li a img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .discos-titulos-secciones:hover { 
+    background-color: #5483f9d9; 
+}
+
+    /* -- COLORES SANTOS -- */
+    .disco-main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 16px;
+    }
+    
+    .disco-vinilo-info {
+        gap: 32px;
+        align-items: center;
+    }
+
+    .disco-vinilo{
+        width: 55%;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .disco-info {
+        flex: 1;
+        padding: 32px;
+        gap: 12px;
+    }
+
+     .disco-info span.info-disco-destacado {
+        font-size: 1.75rem;
+    }
+
+    .disco-info p.info-disco-general {
+        font-size: 1.125rem;
+    }
+
+    .disco-canciones ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .disco-canciones ul li {
+        width: calc(50% - 8px);
+    }
+
+    .disco-secciones ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .disco-secciones ul li {
+        width: calc(50% - 8px);
+    }
+
+    .disco-seccion-contenido {
+        width: 100%;
+    }
+}
